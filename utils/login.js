@@ -1,7 +1,11 @@
 export function loginObject(email, password) {
-  let buildObj = {
-    email: email,
-    password: password,
-  };
-  return JSON.stringify(buildObj);
+  try {
+    let buildObj = {
+      email: email,
+      password: password,
+    };
+    return JSON.stringify(buildObj);
+  } catch (error) {
+    console.error(error);
+  }
 }
